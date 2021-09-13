@@ -3,7 +3,6 @@ import { BleManager } from 'react-native-ble-plx';
 import base64 from 'react-native-base64';
 import DeviceBattery from 'react-native-device-battery';
 import { Icon } from 'react-native-elements'
-import { mdiLedOn } from '@mdi/js';
 import BackgroundTimer from 'react-native-background-timer';
 import {
   TouchableOpacity,
@@ -200,7 +199,6 @@ useEffect( () => {
         >
           <Text style={styles.text}>{buttonStatus}</Text>
         </TouchableOpacity>
-        
         <View style={styles.LEDRoutineHeaderContainer}>
           <Icon style={styles.icon}
               name='led-on' 
@@ -210,7 +208,6 @@ useEffect( () => {
             />
           <Text style={styles.headerText}>LED Routines</Text>      
         </View>
-        
         <View style={styles.LEDRoutineGrid}>
           { LED_ROUTINES.map( (routine, index) => {
               return (
@@ -248,7 +245,7 @@ const styles = StyleSheet.create({
 
   scrollView: {
     height: 800,
-    paddingTop: 40,
+    paddingTop: 20,
     paddingBottom: 40,
     display: 'flex',
     flexDirection: 'column',
@@ -265,6 +262,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 5,
+      height: 5,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 6.68,
+
+    elevation: 8,
   },
   
   connectButton: {
@@ -279,8 +285,6 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 50,
     padding: 12,  
-    marginTop: 20,
-    marginBottom: 20,
     backgroundColor: 'white',
     shadowColor: "#000",
     shadowOffset: {
