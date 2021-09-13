@@ -19,8 +19,7 @@
     "react-native-ble-plx": "^2.0.2",
     "react-native-device-battery": "^2.1.0",
     "react-native-elements": "^3.4.2",
-    "react-native-vector-icons": "^8.1.0",
-    "styled-components": "^5.3.1"
+    "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
