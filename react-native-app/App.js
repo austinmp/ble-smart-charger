@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BleManager } from 'react-native-ble-plx';
-import styled from 'styled-components';
 import base64 from 'react-native-base64';
 import DeviceBattery from 'react-native-device-battery';
 import { Icon } from 'react-native-elements'
+import { mdiLedOn } from '@mdi/js';
 import BackgroundTimer from 'react-native-background-timer';
 import {
   TouchableOpacity,
@@ -182,7 +182,7 @@ useEffect( () => {
     <SafeAreaView style={styles.safeAreaView}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.batteryLevel}>
-          <Icon
+          <Icon styles={styles.icon}
             name='bolt' 
             type='material'
             color='#FFFFFF'
@@ -200,7 +200,17 @@ useEffect( () => {
         >
           <Text style={styles.text}>{buttonStatus}</Text>
         </TouchableOpacity>
-        <Text style={styles.headerText}>LED Routines</Text>      
+        
+        <View style={styles.LEDRoutineHeaderContainer}>
+          <Icon style={styles.icon}
+              name='led-on' 
+              type='material-community'
+              color='#FFFFFF'
+              size={25}
+            />
+          <Text style={styles.headerText}>LED Routines</Text>      
+        </View>
+        
         <View style={styles.LEDRoutineGrid}>
           { LED_ROUTINES.map( (routine, index) => {
               return (
@@ -334,6 +344,20 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: 'white',
     margin: 0,
+  },
+
+  LEDRoutineHeaderContainer : {
+    display: 'flex',
+    flexDirection: 'row',
+    width:'80%',
+    backgroundColor: '#f7b030',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+
+  icon : {
+    marginRight: 20
   }
   
 });
