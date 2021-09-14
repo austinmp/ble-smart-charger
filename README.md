@@ -23,7 +23,7 @@ The charger and corresponding paired smartphone communicate with one another usi
 - Central can write to these characteristics to update or change them.
 - LEDs are updated according to the value of the charachteristics.  
 
-### 📱 IOS / Android  Device Running the Companion App (Central): 
+### 📱 IOS / Android  Device Running the Companion App (Central)
 - Scans for and initiates a connection with nearby Bluetooth devices that  match the GATT service UUID defined by the peripheral. 
 - Writes the current battery level of the smartphone to the peripheral’s battery level characteristic on a two minute interval.
 - Uses user inputs to update the LED routine displayed by the charger by writing values to the LED routine characteristic. 
