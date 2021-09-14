@@ -1,9 +1,8 @@
-<img src="preview.png" width=20% height=20%>
-
-
 # ⚡ BLE Smart Charger
 
 The BLE Smart Charger is a custom-designed, 3D-printed wireless charger, capable of illustrating the current battery level of a connected IOS or Android device through the use of several pre-programmed, beautifully vibrant LED routines.
+
+<img src="app.png" width=20% height=20%>
 
 ## 🛠️ Materials
 
