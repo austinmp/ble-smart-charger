@@ -1,5 +1,4 @@
-
-![Screenshot](preview.png)
+<img src="preview.png" width=50% height=50%>
 
 
 # ⚡ BLE Smart Charger
