@@ -1,4 +1,4 @@
-<h1 align="center"⚡ BLE Smart Charger</h1>
+<h1 align="center">⚡ BLE Smart Charger</h1>
 
 <p align="center">
   <img src="app.png" width=20% height=20%>
