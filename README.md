@@ -12,10 +12,10 @@
 
 
 
-<div>
-    <img src="/demo/model.PNG">
-  <img src="/demo/charger-front.png" width=30% height=30%>
-  <img src="/demo/charger-back.png" width=30% height=30%>
+<div align="center">
+    <img src="/demo/model.PNG" height='350' width="auto">
+  <img src="/demo/charger-front.png" height='350' width="auto">
+  <img src="/demo/charger-back.png" height='350' width="auto">
  </div>
 
 ## 📖 How It Works
