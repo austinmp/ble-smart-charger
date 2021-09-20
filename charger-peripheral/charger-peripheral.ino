@@ -4,7 +4,7 @@
 
 // LED strip setup
 #define LED_PIN     2
-#define QI_CHARGER_PIN 13   
+#define QI_CHARGER_PIN 0   
 #define NUM_LEDS    71
 #define BRIGHTNESS  30
 #define LED_TYPE    WS2811
@@ -27,8 +27,8 @@ BLECharacteristic batteryLevelChar("2A19", BLEWriteWithoutResponse, BUFFER_SIZE,
 BLEIntCharacteristic LEDChar("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWriteWithoutResponse);      // BLE characteristic central write and change chgarger's LED patterns
 
 // Globals
-bool WAS_CHARGING = false;
 int IS_CHARGING = 0;
+int WAS_CHARGING = 0;
 int CURR_NUM_LEDS = NUM_LEDS;
 int CURR_LED_ROUTINE = 0;
 int DEFAULT_LED_ROUTINE = 0;
@@ -44,7 +44,7 @@ void setup() {
     while (!Serial);
     
     pinMode(LED_BUILTIN, OUTPUT);                                       // initialize the built-in LED pin to indicate when a central is connected
-    pinMode(QI_CHARGER_PIN, INPUT);                                     // watch digital pin for on/off status of qi charger (0 or 1)
+    pinMode(QI_CHARGER_PIN, INPUT_PULLUP);                              // watch digital pin for on/off status of qi charger (0 or 1)
 
     FastLED.addLeds<NEOPIXEL,2>(leds, NUM_LEDS);                        // init LED strip and clear it
     FastLED.clear(true);
@@ -78,28 +78,31 @@ void setup() {
 
 void loop() {
     BLEDevice central = BLE.central(); 
-//    IS_CHARGING = digitalRead(QI_CHARGER_PIN);
-//        IS_CHARGING = 1;
-//     Serial.println(IS_CHARGING);
-     // if connected but charging state changes 
-    if(central.connected()){
-        while (central.connected()) {
-            IS_CHARGING = digitalRead(QI_CHARGER_PIN);
-            WAS_CHARGING = true;
-            if(LAST_DATA_RECEIVED > 0){                                   // wait for central to send data before beginning
-                EVERY_N_MILLISECONDS(35) {
+    WAS_CHARGING = IS_CHARGING;
+    IS_CHARGING = !digitalRead(QI_CHARGER_PIN);
+   
+    if(central.connected() && IS_CHARGING){
+        while (central.connected() && IS_CHARGING) {
+            WAS_CHARGING = IS_CHARGING;
+            IS_CHARGING = !digitalRead(QI_CHARGER_PIN);
+            if(LAST_DATA_RECEIVED > 0){                               // wait for central to send data before beginning led routine
+                EVERY_N_MILLISECONDS(15) {
                     displayCurrLEDRoutine();
                 }
             }
         }
-    } else if(IS_CHARGING) {                                             // charging but not connected through app -> play default LED routine
-        WAS_CHARGING = true;
+    }
+    
+    if(IS_CHARGING) {                                                 // charging but not connected through app -> play default LED routine
+        WAS_CHARGING = 1;
         EVERY_N_MILLISECONDS(35) {
             displayCurrLEDRoutine();
         };
-    }
-    if (WAS_CHARGING) {                                          // clear leds if phone was taken off charger                 
-        resetChargerToInitialState();
+    } 
+
+    if(WAS_CHARGING && !IS_CHARGING) {                                // clear leds if phone was taken off charger  
+        FastLED.clear(true);
+        FastLED.show();
     }
 }
 
