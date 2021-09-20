@@ -11,6 +11,11 @@
 - [WS2811 Programmable LED Strip](https://www.amazon.com/ALITOVE-Individual-Addressable-Programmable-Non-Waterproof/dp/B01MG49QKD/ref=sr_1_7?dchild=1&keywords=RGB+LED+WS2811+Strip&qid=1631580480&sr=8-7)
 - 3D Printed Phone Charging Stand ( [charging stand and cover .obj files](./3d-models) ) 
 
+<div  align="center">
+   <img src="/demo/charger-front" width=30% height=30%>
+   <img src="/demo/charger-back" width=30% height=30%>
+</div>
+
 ## 📖 How It Works
 
 The charger and corresponding paired smartphone communicate with one another using Bluetooth Low Energy (BLE). In the Bluetooth specification, a peripheral device can be thought of as a server - it is responsible for advertising its available services and accepting incoming connections. For this project, the charger, specifically the Arduino MKR board housed in the charger stand, acts as the peripheral device. Conversely, the central device acts as a client - searching for available peripherals to connect to and initiating the connections.  The IOS or Android app running the companion React Native app acts as the central device in this instance.
