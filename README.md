@@ -12,7 +12,7 @@
 
 
 
-<div align="center">
+<div align="center" justify="space-evenly">
     <img src="/demo/model.PNG" height='350' width="auto">
   <img src="/demo/charger-front.png" height='350' width="auto">
   <img src="/demo/charger-back.png" height='350' width="auto">
