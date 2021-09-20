@@ -5,16 +5,12 @@
 <p align="center" justify="center">  The Bluetooth Low Energy (BLE) Smart Charger is a custom-designed, 3D-printed wireless charger, capable of illustrating the current battery level of a connected IOS or Android device through the use of several pre-programmed, beautifully vibrant LED routines. </p>
 
 ## 🛠️ Materials
-
 - [Arduino MKR WiFi 1010](https://store-usa.arduino.cc/products/arduino-mkr-wifi-1010)
 - [Gikfun Qi Wireless Charger Coil and PCBA Motherboard](https://www.amazon.com/Gikfun-Wireless-Charger-Circuit-Charging/dp/B073W7P5T8/ref=sr_1_9?dchild=1&keywords=qi+wireless+charger+coil&qid=1631580272&s=electronics&sr=1-9)
 - [WS2811 Programmable LED Strip](https://www.amazon.com/ALITOVE-Individual-Addressable-Programmable-Non-Waterproof/dp/B01MG49QKD/ref=sr_1_7?dchild=1&keywords=RGB+LED+WS2811+Strip&qid=1631580480&sr=8-7)
 - 3D Printed Phone Charging Stand ( [charging stand and cover .obj files](./3d-models) ) 
-
-<div  align="center">
-   <img src="/demo/charger-front.png" width=30% height=30%>
-   <img src="/demo/charger-back.png" width=30% height=30%>
-</div>
+<img src="/demo/charger-front.png" width=30% height=30%>
+<img src="/demo/charger-back.png" width=30% height=30%>
 
 ## 📖 How It Works
 
