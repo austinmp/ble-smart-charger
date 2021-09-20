@@ -10,8 +10,10 @@
 - [WS2811 Programmable LED Strip](https://www.amazon.com/ALITOVE-Individual-Addressable-Programmable-Non-Waterproof/dp/B01MG49QKD/ref=sr_1_7?dchild=1&keywords=RGB+LED+WS2811+Strip&qid=1631580480&sr=8-7)
 - 3D Printed Phone Charging Stand ( [charging stand and cover .obj files](./3d-models) ) 
 
+
+
 <div>
-  <img src="/demo/model.PNG" width=30% height=30%>
+    <img src="/demo/model.PNG">
   <img src="/demo/charger-front.png" width=30% height=30%>
   <img src="/demo/charger-back.png" width=30% height=30%>
  </div>
