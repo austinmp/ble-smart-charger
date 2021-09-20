@@ -57,11 +57,11 @@ The BLE Smart Charger uses a number of open source libraries to work properly:
 ![Charging (Not Connected With BLE)](demo/electric-current-single-color.GIF)
 </br>
 
-#### Rainbow (Does Not Reflect Current Battery Level)
+#### Rainbow
 ![Charging (Not Connected With BLE)](demo/rainbow.GIF)
 </br>
 
-#### Rainbow Cylon (Does Not Reflect Current Battery Level)
+#### Rainbow Cylon
 ![Charging (Not Connected With BLE)](demo/rainbow-cylon.GIF)
 </br>
 
