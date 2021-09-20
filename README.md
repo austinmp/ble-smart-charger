@@ -43,19 +43,25 @@ The BLE Smart Charger uses a number of open source libraries to work properly:
 ## 📺  Demos
 #### Charging but Not Connected to Arduino
 ![Charging (Not Connected With BLE)](demo/not-connected.GIF) 
+</br>
 
 #### Charging and Connected to Arduino (Displays Current Battery Level)
 ![Charging (Not Connected With BLE)](demo/connected-default.GIF)
+</br>
 
 #### Cylon (Displays Current Battery Level)
 ![Charging (Not Connected With BLE)](demo/battery-level-cylon.GIF)
+</br>
 
 #### Single Color Electric Current (Displays Current Battery Level)
 ![Charging (Not Connected With BLE)](demo/electric-current-single-color.GIF)
+</br>
 
 #### Rainbow (Does Not Reflect Current Battery Level)
 ![Charging (Not Connected With BLE)](demo/rainbow.GIF)
+</br>
 
 #### Rainbow Cylon (Does Not Reflect Current Battery Level)
 ![Charging (Not Connected With BLE)](demo/rainbow-cylon.GIF)
+</br>
 
