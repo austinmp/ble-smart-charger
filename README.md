@@ -72,3 +72,5 @@ The BLE Smart Charger uses a number of open source libraries to work properly:
 ![Charging (Not Connected With BLE)](demo/rainbow-cylon.GIF)
 </br>
 
+## 👨‍💻 Author
+Austin Pinto
