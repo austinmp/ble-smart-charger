@@ -41,4 +41,5 @@ The BLE Smart Charger uses a number of open source libraries to work properly:
 
 
 ## 📺  Demos
+![Charging (Not Connected With BLE)](demo/not-connected.GIF)
 
